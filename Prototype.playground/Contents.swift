@@ -1,4 +1,5 @@
 import Cocoa
+import XcodeUniversalSearchFoundation
 
 var urlStrings = [
     "string",
@@ -15,13 +16,18 @@ print(urls)
 
 let cs = URLComponents(string: urlStrings[2])
 
-print(cs)
+print(String(describing: cs))
 
 extension CharacterSet {
     var characters: Set<String> {
         (self as NSCharacterSet).characters
     }
 }
+
+let encodedUrlTemplate = "https://sourcegraph.com/search?q=repo:%5Egithub%5C.com/ReactiveX/RxSwift%24+/%28typealias%7Cstruct%7Cclass%7Cprotocol%7Cenum%29+%s/&patternType=regexp"
+
+print("Removing percent encoding:")
+print(URLUtil.removePercentEncoding(from: encodedUrlTemplate) ?? "<removing percent encoding failed>")
 
 
 extension NSCharacterSet {

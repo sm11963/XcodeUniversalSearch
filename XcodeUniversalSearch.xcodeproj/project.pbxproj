@@ -33,6 +33,7 @@
 		E2A5FDB7255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2A5FDA1255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2A5FDC3255C86FE0066DB35 /* Collection+FoundationalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B85D2552045500269947 /* Collection+FoundationalHelpers.swift */; };
 		E2A5FDC8255C8AC40066DB35 /* String+FoundationalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B8582552042E00269947 /* String+FoundationalHelpers.swift */; };
+		E2A5FDCE255C8FB70066DB35 /* URLUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A5FDCD255C8FB70066DB35 /* URLUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		E2A5FDA9255C803B0066DB35 /* XcodeUniversalSearchFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeUniversalSearchFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A5FDB0255C803B0066DB35 /* XcodeUniversalSearchFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeUniversalSearchFoundationTests.swift; sourceTree = "<group>"; };
 		E2A5FDB2255C803B0066DB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2A5FDCD255C8FB70066DB35 /* URLUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLUtil.swift; sourceTree = "<group>"; };
 		E2E8E01C2557BF920097635E /* Prototype.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Prototype.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -313,6 +315,7 @@
 				E216B85D2552045500269947 /* Collection+FoundationalHelpers.swift */,
 				E2A5FDA3255C803B0066DB35 /* XcodeUniversalSearchFoundation.h */,
 				E2A5FDA4255C803B0066DB35 /* Info.plist */,
+				E2A5FDCD255C8FB70066DB35 /* URLUtil.swift */,
 			);
 			path = XcodeUniversalSearchFoundation;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A5FDC8255C8AC40066DB35 /* String+FoundationalHelpers.swift in Sources */,
+				E2A5FDCE255C8FB70066DB35 /* URLUtil.swift in Sources */,
 				E2A5FDC3255C86FE0066DB35 /* Collection+FoundationalHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
