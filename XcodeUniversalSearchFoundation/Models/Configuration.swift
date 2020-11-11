@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Configuration: Codable {
+public struct Configuration: Codable {
     
     struct Command: Codable {
         struct Options: Codable {
@@ -27,7 +27,7 @@ struct Configuration: Codable {
     let commands: [Command]
 }
 
-final class ConfigurationManager {
+public final class ConfigurationManager {
     
     enum Result {
         case success(_ configuration: Configuration?)

@@ -122,7 +122,7 @@
 		E216B83E2551DE2800269947 /* CommandTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandTable.swift; sourceTree = "<group>"; };
 		E216B8492551E54C00269947 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		E216B8582552042E00269947 /* String+FoundationalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FoundationalHelpers.swift"; sourceTree = "<group>"; };
-		E216B85D2552045500269947 /* Collection+FoundationalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Collection+FoundationalHelpers.swift"; path = "XcodeUniversalSearchFoundation/Collection+FoundationalHelpers.swift"; sourceTree = SOURCE_ROOT; };
+		E216B85D2552045500269947 /* Collection+FoundationalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Collection+FoundationalHelpers.swift"; path = "XcodeUniversalSearchFoundation/FoundationExtensions/Collection+FoundationalHelpers.swift"; sourceTree = SOURCE_ROOT; };
 		E216B86725523E4F00269947 /* CommandOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandOptionsView.swift; sourceTree = "<group>"; };
 		E245C915254F21060059225D /* XcodeUniversalSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeUniversalSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E245C918254F21060059225D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -207,19 +207,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E216B82C2551DCEE00269947 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				E216B8492551E54C00269947 /* Configuration.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		E245C90C254F21060059225D = {
 			isa = PBXGroup;
 			children = (
 				E2E8E01C2557BF920097635E /* Prototype.playground */,
-				E216B82C2551DCEE00269947 /* Shared */,
 				E245C917254F21060059225D /* XcodeUniversalSearch */,
 				E245C92D254F21080059225D /* XcodeUniversalSearchTests */,
 				E245C938254F21080059225D /* XcodeUniversalSearchUITests */,
@@ -311,11 +302,11 @@
 		E2A5FDA2255C803B0066DB35 /* XcodeUniversalSearchFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				E216B8582552042E00269947 /* String+FoundationalHelpers.swift */,
-				E216B85D2552045500269947 /* Collection+FoundationalHelpers.swift */,
+				E2A5FDF1255C9A700066DB35 /* Models */,
+				E2A5FDE3255C9A430066DB35 /* FoundationExtensions */,
 				E2A5FDA3255C803B0066DB35 /* XcodeUniversalSearchFoundation.h */,
 				E2A5FDA4255C803B0066DB35 /* Info.plist */,
-				E2A5FDCD255C8FB70066DB35 /* URLUtil.swift */,
+				E2A5FDEC255C9A530066DB35 /* Utilities */,
 			);
 			path = XcodeUniversalSearchFoundation;
 			sourceTree = "<group>";
@@ -327,6 +318,31 @@
 				E2A5FDB2255C803B0066DB35 /* Info.plist */,
 			);
 			path = XcodeUniversalSearchFoundationTests;
+			sourceTree = "<group>";
+		};
+		E2A5FDE3255C9A430066DB35 /* FoundationExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				E216B8582552042E00269947 /* String+FoundationalHelpers.swift */,
+				E216B85D2552045500269947 /* Collection+FoundationalHelpers.swift */,
+			);
+			path = FoundationExtensions;
+			sourceTree = "<group>";
+		};
+		E2A5FDEC255C9A530066DB35 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E2A5FDCD255C8FB70066DB35 /* URLUtil.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E2A5FDF1255C9A700066DB35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E216B8492551E54C00269947 /* Configuration.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
