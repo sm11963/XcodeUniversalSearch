@@ -8,6 +8,7 @@
 import Foundation
 import XcodeKit
 import AppKit
+import XcodeUniversalSearchFoundation
 
 final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     

@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension String {
+public extension String {
+    
     subscript (_ range: Range<Int>) -> Substring {
         let start = index(startIndex, offsetBy: range.startIndex)
         let end = index(startIndex, offsetBy: range.startIndex + range.count)
