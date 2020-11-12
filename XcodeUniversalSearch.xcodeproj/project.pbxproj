@@ -34,6 +34,8 @@
 		E2A5FDC3255C86FE0066DB35 /* Collection+FoundationalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B85D2552045500269947 /* Collection+FoundationalHelpers.swift */; };
 		E2A5FDC8255C8AC40066DB35 /* String+FoundationalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B8582552042E00269947 /* String+FoundationalHelpers.swift */; };
 		E2A5FDCE255C8FB70066DB35 /* URLUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A5FDCD255C8FB70066DB35 /* URLUtil.swift */; };
+		E2A5FE02255CB60B0066DB35 /* XcodeUniversalSearchFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A5FDA1255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework */; };
+		E2A5FE03255CB60B0066DB35 /* XcodeUniversalSearchFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2A5FDA1255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,13 @@
 			remoteGlobalIDString = E2A5FDA0255C803B0066DB35;
 			remoteInfo = XcodeUniversalSearchFoundation;
 		};
+		E2A5FE04255CB60B0066DB35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E245C90D254F21060059225D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2A5FDA0255C803B0066DB35;
+			remoteInfo = XcodeUniversalSearchFoundation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -100,6 +109,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E245C968254F43CA0059225D /* XcodeKit.framework in Embed Frameworks */,
+				E2A5FE03255CB60B0066DB35 /* XcodeUniversalSearchFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E245C967254F43CA0059225D /* XcodeKit.framework in Frameworks */,
+				E2A5FE02255CB60B0066DB35 /* XcodeUniversalSearchFoundation.framework in Frameworks */,
 				E245C951254F21340059225D /* Cocoa.framework in Frameworks */,
 				E245C953254F21340059225D /* XcodeKit.framework in Frameworks */,
 			);
@@ -428,6 +439,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E2A5FE05255CB60B0066DB35 /* PBXTargetDependency */,
 			);
 			name = XcodeUniversalSearchExtension;
 			productName = XcodeUniversalSearchExtension;
@@ -664,6 +676,11 @@
 			isa = PBXTargetDependency;
 			target = E2A5FDA0255C803B0066DB35 /* XcodeUniversalSearchFoundation */;
 			targetProxy = E2A5FDB4255C803B0066DB35 /* PBXContainerItemProxy */;
+		};
+		E2A5FE05255CB60B0066DB35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2A5FDA0255C803B0066DB35 /* XcodeUniversalSearchFoundation */;
+			targetProxy = E2A5FE04255CB60B0066DB35 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -990,7 +1007,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.smiller.XcodeUniversalSearchFoundation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pandaprograms.XcodeUniversalSearchFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1017,7 +1034,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.smiller.XcodeUniversalSearchFoundation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pandaprograms.XcodeUniversalSearchFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

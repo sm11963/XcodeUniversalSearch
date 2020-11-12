@@ -59,6 +59,7 @@ final class CommandTableViewController: NSViewController, NSTableViewDelegate, N
         
         tableView.headerView?.isHidden = false
         tableView.allowsMultipleSelection = true
+        tableView.columnAutoresizingStyle = .uniformColumnAutoresizingStyle
         
         let nameColumn = NSTableColumn(identifier: .name)
         nameColumn.minWidth = 150

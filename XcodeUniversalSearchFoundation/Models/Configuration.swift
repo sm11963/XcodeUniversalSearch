@@ -42,7 +42,7 @@ public final class ConfigurationManager {
     }
     
     init?() {
-        guard let userDefaults = UserDefaults(suiteName: "M952V223C9.group.com.pandaprograms.XcodeUniversalSearch") else {
+        guard let userDefaults = UserDefaults(suiteName: Self.defaultsSuiteName) else {
             return nil
         }
         self.userDefaults = userDefaults
@@ -84,4 +84,6 @@ public final class ConfigurationManager {
     
     private static let decoder = JSONDecoder()
     private static let encoder = JSONEncoder()
+    
+    private static let defaultsSuiteName = "M952V223C9.group.com.pandaprograms.XcodeUniversalSearch"
 }
