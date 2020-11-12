@@ -10,15 +10,23 @@ import Foundation
 public struct Configuration: Codable {
     
     public struct Command: Codable {
+        
         public struct Options: Codable {
+            
+            public let shouldPercentEncodeFullUrl: Bool
             public let shouldEscapeForRegex: Bool
             public let shouldEscapeDoubleQuotes: Bool
             
             public static var `default`: Self {
-                .init(shouldEscapeForRegex: false, shouldEscapeDoubleQuotes: false)
+                .init(shouldPercentEncodeFullUrl: true,
+                      shouldEscapeForRegex: false,
+                      shouldEscapeDoubleQuotes: false)
             }
             
-            public init(shouldEscapeForRegex: Bool, shouldEscapeDoubleQuotes: Bool) {
+            public init(shouldPercentEncodeFullUrl: Bool,
+                        shouldEscapeForRegex: Bool,
+                        shouldEscapeDoubleQuotes: Bool) {
+                self.shouldPercentEncodeFullUrl = shouldPercentEncodeFullUrl
                 self.shouldEscapeForRegex = shouldEscapeForRegex
                 self.shouldEscapeDoubleQuotes = shouldEscapeDoubleQuotes
             }

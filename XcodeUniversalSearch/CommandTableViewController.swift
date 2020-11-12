@@ -176,6 +176,7 @@ final class CommandTableViewController: NSViewController, NSTableViewDelegate, N
                 textField.translatesAutoresizingMaskIntoConstraints = false
                 textField.isBordered = false
                 textField.controlSize = .small
+                textField.cell?.truncatesLastVisibleLine = true
                 textField.delegate = self
                             
                 // Create a cell
