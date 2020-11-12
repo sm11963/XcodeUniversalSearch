@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		E216B8372551DD7F00269947 /* CommandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B8362551DD7F00269947 /* CommandTableViewController.swift */; };
 		E216B83F2551DE2800269947 /* CommandTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B83E2551DE2800269947 /* CommandTable.swift */; };
-		E216B84A2551E54C00269947 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B8492551E54C00269947 /* Configuration.swift */; };
-		E216B8542551EBAB00269947 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B8492551E54C00269947 /* Configuration.swift */; };
 		E216B86825523E4F00269947 /* CommandOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B86725523E4F00269947 /* CommandOptionsView.swift */; };
 		E245C919254F21060059225D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E245C918254F21060059225D /* AppDelegate.swift */; };
 		E245C91B254F21060059225D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E245C91A254F21060059225D /* ContentView.swift */; };
@@ -36,6 +34,7 @@
 		E2A5FDCE255C8FB70066DB35 /* URLUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A5FDCD255C8FB70066DB35 /* URLUtil.swift */; };
 		E2A5FE02255CB60B0066DB35 /* XcodeUniversalSearchFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A5FDA1255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework */; };
 		E2A5FE03255CB60B0066DB35 /* XcodeUniversalSearchFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2A5FDA1255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2A5FE14255CE8E10066DB35 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B8492551E54C00269947 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -592,7 +591,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E216B86825523E4F00269947 /* CommandOptionsView.swift in Sources */,
-				E216B84A2551E54C00269947 /* Configuration.swift in Sources */,
 				E245C91B254F21060059225D /* ContentView.swift in Sources */,
 				E216B8372551DD7F00269947 /* CommandTableViewController.swift in Sources */,
 				E245C919254F21060059225D /* AppDelegate.swift in Sources */,
@@ -620,7 +618,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E216B8542551EBAB00269947 /* Configuration.swift in Sources */,
 				E245C956254F21340059225D /* SourceEditorExtension.swift in Sources */,
 				E245C958254F21340059225D /* SourceEditorCommand.swift in Sources */,
 			);
@@ -632,6 +629,7 @@
 			files = (
 				E2A5FDC8255C8AC40066DB35 /* String+FoundationalHelpers.swift in Sources */,
 				E2A5FDCE255C8FB70066DB35 /* URLUtil.swift in Sources */,
+				E2A5FE14255CE8E10066DB35 /* Configuration.swift in Sources */,
 				E2A5FDC3255C86FE0066DB35 /* Collection+FoundationalHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

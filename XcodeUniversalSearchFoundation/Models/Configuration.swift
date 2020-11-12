@@ -9,31 +9,46 @@ import Foundation
 
 public struct Configuration: Codable {
     
-    struct Command: Codable {
-        struct Options: Codable {
-            let shouldEscapeForRegex: Bool
-            let shouldEscapeDoubleQuotes: Bool
+    public struct Command: Codable {
+        public struct Options: Codable {
+            public let shouldEscapeForRegex: Bool
+            public let shouldEscapeDoubleQuotes: Bool
             
-            static var `default`: Self {
+            public static var `default`: Self {
                 .init(shouldEscapeForRegex: false, shouldEscapeDoubleQuotes: false)
+            }
+            
+            public init(shouldEscapeForRegex: Bool, shouldEscapeDoubleQuotes: Bool) {
+                self.shouldEscapeForRegex = shouldEscapeForRegex
+                self.shouldEscapeDoubleQuotes = shouldEscapeDoubleQuotes
             }
         }
 
-        let name: String
-        let urlTemplate: String
-        let options: Options
+        public let name: String
+        public let urlTemplate: String
+        public let options: Options
+        
+        public init(name: String, urlTemplate: String, options: Options) {
+            self.name = name
+            self.urlTemplate = urlTemplate
+            self.options = options 
+        }
     }
     
-    let commands: [Command]
+    public let commands: [Command]
+    
+    public init(commands: [Command]) {
+        self.commands = commands
+    }
 }
 
 public final class ConfigurationManager {
     
-    enum Result {
+    public enum Result {
         case success(_ configuration: Configuration?)
         case error(_ error: Error)
         
-        var data: Configuration? {
+        public var data: Configuration? {
             switch self {
             case .success(let configuration): return configuration
             case .error(_): return nil
@@ -41,14 +56,18 @@ public final class ConfigurationManager {
         }
     }
     
-    init?() {
+    public enum ConfigurationWriteError: Error {
+        case noConfiguration
+    }
+    
+    public init?() {
         guard let userDefaults = UserDefaults(suiteName: Self.defaultsSuiteName) else {
             return nil
         }
         self.userDefaults = userDefaults
     }
     
-    func load() -> Result {
+    public func load() -> Result {
         let storedData = userDefaults.data(forKey: StorageKey.configuration.rawValue)
         guard let data = storedData else {
             return .success(nil)
@@ -61,7 +80,7 @@ public final class ConfigurationManager {
         }
     }
     
-    func save(_ configuration: Configuration) -> Bool {
+    public func save(_ configuration: Configuration) -> Bool {
         guard let data = try? Self.encoder.encode(configuration) else {
             return false
         }
@@ -70,8 +89,34 @@ public final class ConfigurationManager {
         return true
     }
     
-    func clearStorage() {
+    public func clearStorage() {
         userDefaults.removeObject(forKey: StorageKey.configuration.rawValue)
+    }
+    
+    public func write(to path: String) throws -> Bool {
+        Self.encoder.outputFormatting.insert(.prettyPrinted)
+        defer { Self.encoder.outputFormatting.remove(.prettyPrinted) }
+        
+        switch load() {
+        case .success(let configuration):
+            if let configuration = configuration {
+                return Self.fileManager.createFile(atPath: path, contents: try Self.encoder.encode(configuration))
+            } else {
+                throw ConfigurationWriteError.noConfiguration
+            }
+        case .error(let error):
+            throw error
+        }
+    }
+    
+    public func read(from path: String) throws -> Configuration? {
+        guard let data = Self.fileManager.contents(atPath: path) else {
+            // TODO: Handle error better
+            print("Failed to load data from file at path \"\(path)\"")
+            return nil
+        }
+        
+        return try Self.decoder.decode(Configuration.self, from: data)
     }
     
     // MARK: - Private
@@ -84,6 +129,7 @@ public final class ConfigurationManager {
     
     private static let decoder = JSONDecoder()
     private static let encoder = JSONEncoder()
+    private static let fileManager = FileManager.default
     
     private static let defaultsSuiteName = "M952V223C9.group.com.pandaprograms.XcodeUniversalSearch"
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import XcodeUniversalSearchFoundation
 
 
 struct CommandOptionsView: View {

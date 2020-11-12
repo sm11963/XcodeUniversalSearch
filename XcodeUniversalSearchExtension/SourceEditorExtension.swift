@@ -7,8 +7,9 @@
 
 import Foundation
 import XcodeKit
+import XcodeUniversalSearchFoundation
 
-class SourceEditorExtension: NSObject, XCSourceEditorExtension {
+final class SourceEditorExtension: NSObject, XCSourceEditorExtension {
     
     func extensionDidFinishLaunching() {}
     

@@ -8,6 +8,8 @@
 import Foundation
 import AppKit
 import SwiftUI
+import XcodeUniversalSearchFoundation
+import Combine
 
 /**
  TODO: Follow https://samwize.com/2018/11/27/drag-and-drop-to-reorder-nstableview/ to enable re-ordering rows
@@ -22,6 +24,7 @@ final class CommandTableViewController: NSViewController, NSTableViewDelegate, N
     weak var viewDelegate: CommandTableControllerViewDelegate?
         
     func refresh() {
+        loadFromConfiguration()
         tableView.reloadData()
     }
     
@@ -42,7 +45,7 @@ final class CommandTableViewController: NSViewController, NSTableViewDelegate, N
         makeTextFieldFirstResponder(atRow: newIndex, column: 0)
         synchronizeCommands()
     }
-    
+        
     // MARK: - NSViewController
     
     override func loadView() {
@@ -99,7 +102,8 @@ final class CommandTableViewController: NSViewController, NSTableViewDelegate, N
         let col = tableView.column(for: textField)
         let row = tableView.row(for: textField)
         
-        
+        // TODO handle case where this goes out of range (row = -1)
+        // Repro: Start editing a row, while editing, do an import
         let command = commands[row]
         let newCommand: Configuration.Command?
         switch tableView.tableColumns[col].identifier {
@@ -273,7 +277,7 @@ final class CommandTableViewController: NSViewController, NSTableViewDelegate, N
         switch result {
         case .error(let error):
             // TODO: Add a much better error and show in UI
-            print("ERROR: Encountered error loading configuration: \(error)")
+            print("ERROR: Encountered error loading configuration: \(error.localizedDescription)")
         case .success(let configuration):
             if let config = configuration {
                 commands = config.commands

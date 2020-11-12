@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import Combine
 
 struct CommandTable: NSViewControllerRepresentable {
     
     @Binding var canRemoveRow: Bool
-    @Binding var removeRowAction: (() -> ())
-    @Binding var addRowAction: (() -> ())
-    
+    let addRowPublisher: AnyPublisher<(), Never>
+    let removeRowPublisher: AnyPublisher<(), Never>
+    let reloadPublisher: AnyPublisher<(), Never>
+        
     typealias NSViewControllerType = CommandTableViewController
     
     class Coordinator: CommandTableControllerViewDelegate {
@@ -24,6 +26,8 @@ struct CommandTable: NSViewControllerRepresentable {
                 parent.canRemoveRow = newValue
             }
         }
+        
+        var dismantleScopedCancellables = Set<AnyCancellable>()
         
         private let parent: CommandTable
         
@@ -39,20 +43,27 @@ struct CommandTable: NSViewControllerRepresentable {
     func makeNSViewController(
         context: NSViewControllerRepresentableContext<CommandTable>
     ) -> CommandTableViewController {
-        
         let controller = CommandTableViewController()
-        
+                
         controller.viewDelegate = context.coordinator
         
-        DispatchQueue.main.async { [controller] in
-            self.removeRowAction = {
-                controller.removeSelectedRow()
-            }
-            
-            self.addRowAction = {
+        addRowPublisher
+            .sink {
                 controller.addRow()
             }
-        }
+            .store(in: &context.coordinator.dismantleScopedCancellables)
+        
+        removeRowPublisher
+            .sink {
+                controller.removeSelectedRow()
+            }
+            .store(in: &context.coordinator.dismantleScopedCancellables)
+        
+        reloadPublisher
+            .sink {
+                controller.refresh()
+            }
+            .store(in: &context.coordinator.dismantleScopedCancellables)
 
         return controller
     }
@@ -61,4 +72,8 @@ struct CommandTable: NSViewControllerRepresentable {
         _ nsViewController: CommandTableViewController,
         context: NSViewControllerRepresentableContext<CommandTable>
     ) {}
+    
+    static func dismantleNSViewController(_ nsViewController: CommandTableViewController, coordinator: Coordinator) {
+        coordinator.dismantleScopedCancellables.removeAll()
+    }
 }
