@@ -18,7 +18,6 @@
 		E245C92F254F21080059225D /* XcodeUniversalSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E245C92E254F21080059225D /* XcodeUniversalSearchTests.swift */; };
 		E245C93A254F21080059225D /* XcodeUniversalSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E245C939254F21080059225D /* XcodeUniversalSearchUITests.swift */; };
 		E245C951254F21340059225D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E245C950254F21340059225D /* Cocoa.framework */; };
-		E245C953254F21340059225D /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E245C952254F21340059225D /* XcodeKit.framework */; };
 		E245C956254F21340059225D /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E245C955254F21340059225D /* SourceEditorExtension.swift */; };
 		E245C958254F21340059225D /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E245C957254F21340059225D /* SourceEditorCommand.swift */; };
 		E245C95D254F21340059225D /* XcodeUniversalSearchExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E245C94E254F21340059225D /* XcodeUniversalSearchExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -201,7 +200,6 @@
 				E245C967254F43CA0059225D /* XcodeKit.framework in Frameworks */,
 				E2A5FE02255CB60B0066DB35 /* XcodeUniversalSearchFoundation.framework in Frameworks */,
 				E245C951254F21340059225D /* Cocoa.framework in Frameworks */,
-				E245C953254F21340059225D /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +496,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					E245C914254F21060059225D = {
 						CreatedOnToolsVersion = 12.1;
@@ -828,6 +826,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XcodeUniversalSearch/XcodeUniversalSearch.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"XcodeUniversalSearch/Preview Content\"";
@@ -854,6 +853,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XcodeUniversalSearch/XcodeUniversalSearch.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"XcodeUniversalSearch/Preview Content\"";
@@ -961,6 +961,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XcodeUniversalSearchExtension/XcodeUniversalSearchExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M952V223C9;
@@ -971,6 +972,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pandaprograms.XcodeUniversalSearch.XcodeUniversalSearchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -982,6 +984,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XcodeUniversalSearchExtension/XcodeUniversalSearchExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M952V223C9;
@@ -992,6 +995,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pandaprograms.XcodeUniversalSearch.XcodeUniversalSearchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1002,6 +1006,8 @@
 		E2A5FDB9255C803B0066DB35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1029,6 +1035,8 @@
 		E2A5FDBA255C803B0066DB35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
