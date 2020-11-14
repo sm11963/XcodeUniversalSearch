@@ -34,6 +34,9 @@
 		E2A5FDCE255C8FB70066DB35 /* URLUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A5FDCD255C8FB70066DB35 /* URLUtil.swift */; };
 		E2A5FE02255CB60B0066DB35 /* XcodeUniversalSearchFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A5FDA1255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework */; };
 		E2A5FE03255CB60B0066DB35 /* XcodeUniversalSearchFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2A5FDA1255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2A5FE0D255CE8340066DB35 /* VersionableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A5FE0A255CE8340066DB35 /* VersionableContainer.swift */; };
+		E2A5FE0E255CE8340066DB35 /* Versionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A5FE0B255CE8340066DB35 /* Versionable.swift */; };
+		E2A5FE0F255CE8340066DB35 /* VersionableDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A5FE0C255CE8340066DB35 /* VersionableDecoder.swift */; };
 		E2A5FE14255CE8E10066DB35 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B8492551E54C00269947 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +165,9 @@
 		E2A5FDB0255C803B0066DB35 /* XcodeUniversalSearchFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeUniversalSearchFoundationTests.swift; sourceTree = "<group>"; };
 		E2A5FDB2255C803B0066DB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2A5FDCD255C8FB70066DB35 /* URLUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLUtil.swift; sourceTree = "<group>"; };
+		E2A5FE0A255CE8340066DB35 /* VersionableContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionableContainer.swift; sourceTree = "<group>"; };
+		E2A5FE0B255CE8340066DB35 /* Versionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Versionable.swift; sourceTree = "<group>"; };
+		E2A5FE0C255CE8340066DB35 /* VersionableDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionableDecoder.swift; sourceTree = "<group>"; };
 		E2E8E01C2557BF920097635E /* Prototype.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Prototype.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -350,6 +356,9 @@
 		E2A5FDF1255C9A700066DB35 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E2A5FE0B255CE8340066DB35 /* Versionable.swift */,
+				E2A5FE0A255CE8340066DB35 /* VersionableContainer.swift */,
+				E2A5FE0C255CE8340066DB35 /* VersionableDecoder.swift */,
 				E216B8492551E54C00269947 /* Configuration.swift */,
 			);
 			path = Models;
@@ -630,7 +639,10 @@
 				E2A5FDC8255C8AC40066DB35 /* String+FoundationalHelpers.swift in Sources */,
 				E2A5FDCE255C8FB70066DB35 /* URLUtil.swift in Sources */,
 				E2A5FE14255CE8E10066DB35 /* Configuration.swift in Sources */,
+				E2A5FE0D255CE8340066DB35 /* VersionableContainer.swift in Sources */,
+				E2A5FE0E255CE8340066DB35 /* Versionable.swift in Sources */,
 				E2A5FDC3255C86FE0066DB35 /* Collection+FoundationalHelpers.swift in Sources */,
+				E2A5FE0F255CE8340066DB35 /* VersionableDecoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

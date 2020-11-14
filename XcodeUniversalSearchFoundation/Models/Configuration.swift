@@ -36,9 +36,29 @@ public struct Configuration: Codable {
     }
     
     public let commands: [Command]
+    public let version: Version
     
     public init(commands: [Command]) {
+        self.version = Self._version
         self.commands = commands
+    }
+    
+    // MARK: Private
+    
+    private static let _version: Version = .v1
+}
+
+extension Configuration: Versionable {
+    
+    public enum Version: Int, VersionType {
+        case v1 = 1
+    }
+
+    public static func migrate(to: Version) -> Migration {
+        switch to {
+        case .v1:
+            return .none
+        }
     }
 }
 
@@ -127,7 +147,7 @@ public final class ConfigurationManager {
     
     private let userDefaults: UserDefaults
     
-    private static let decoder = JSONDecoder()
+    private static let decoder = VersionableDecoder()
     private static let encoder = JSONEncoder()
     private static let fileManager = FileManager.default
     
