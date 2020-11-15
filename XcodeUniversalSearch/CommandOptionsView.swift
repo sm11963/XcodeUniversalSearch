@@ -20,8 +20,8 @@ struct CommandOptionsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Toggle("Remove percent encoding from url template and encode final url", isOn: $percentEncodeFullUrl)
-            Toggle("Escape regex metacharacters in search string (escaped with /)", isOn: $escapeRegex)
-            Toggle("Escape double quotes in search string (escaped with ///)", isOn: $escapeDoubleQuote)
+            Toggle("Escape regex metacharacters in search string (escaped with \\)", isOn: $escapeRegex)
+            Toggle("Escape double quotes in search string (escaped with \\)", isOn: $escapeDoubleQuote)
             HStack {
                 Spacer()
                 Button("Save") {
