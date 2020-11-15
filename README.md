@@ -1,6 +1,8 @@
-<img src="XcodeUniversalSearch/Assets.xcassets/AppIcon.appiconset/512x512@2x.png" width="64" height="64" align="left">
+<img src="XcodeUniversalSearch/Assets.xcassets/AppIcon.appiconset/512x512@2x.png" width="64" align="left">
 
 # XcodeUniversalSearch
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Add shortcuts to search any url with selected text. This is like custom search engines for Google Chrome, for Xcode. We use it to quickly search Sourcegraph directly to link code to documentation and share with co-workers.
 
