@@ -2,7 +2,9 @@
 
 # XcodeUniversalSearch
 
-![Example configuration UI screenshot](resources/example_configuration_ui.png)
+Add shortcuts to search any url with selected text. This is like custom search engines for Google Chrome, for Xcode. We use it to quickly search Sourcegraph directly to link code to documentation and share with co-workers.
+
+![Example configuration UI screenshot](resources/configuration_ui_screenshot.png)
 
 ## Instructions
 
@@ -20,7 +22,7 @@
 
 1. Launch Xcode.
 1. Select some text in the editor (this must be on a single line right now).
-1. Go to Menu bar > Editor > XcodeUniversalSearch (at the bottom) and select an option to search for the selection.
+1. Go to Menu bar > Editor > XcodeUniversalSearch (at the bottom) and select an option to open your defined URL with the selection.
 
 ### Editing configuration
 
@@ -28,10 +30,39 @@
 1. Add/delete/update your search commands as necessary.
     - The Command name is what shows up in the Editor menu.
     - When the command is selected, the selected text is filled into the URL template replacing any `%s` tokens, the resulting URL is launched.
-    - In Options, you can configure additional logic for escaping the text selection before filling in the URL - *note* these do not apply to the URL template
-    - **Note** the entire url will be percent encoded, after adding any escape characters configured in the options to the selected text. So, if you add percent encoding to the url template, it will be double encoded.
+    - In Options, you can configure additional logic for constructing the URL, see [Options](#options) for more details.
 
-### Setup keybindings
+#### Options
+
+For each URL, there are some additional options to configure how to construct the URL to open.
+
+<img src="resources/options_ui_screenshot.png" width="400">
+
+##### Remove percent encoding from url template and encode final url
+
+*Default enabled*
+
+This configures if the full URL should be percent encoded before opening the URL. In order to be make it easier to copy and paste URLs, before percent encoding, this option will decode any existing percent encoded characters in the URL template. This should work most of the time, but there may be cases where this could cause some issues. If disabled, you will need to make sure that the URL template is appropriately percent encoded as a URL.
+
+*Note*, the selected text will always be percent encoded regardless of this option - this option only affects the URL template.
+
+##### Escape regex metacharacters in search string (escaped with /)
+
+*Default disabled*
+
+Enables escaping characters in the selection text that might match regex metacharacters. This is done using [NSRegularExpression.escapedPattern(for:)](https://developer.apple.com/documentation/foundation/nsregularexpression/1408386-escapedpattern), checkout those docs for an example of what this does.
+
+This is useful if searching in a Sourcegraph regex pattern, typically your search from the selected text should be literal see the "Sourcegraph type" url template in [the screenshot](#xcodeuniversalsearch).
+
+##### Escape double quotes in search string (escaped with /)
+
+*Default disabled*
+
+Enables escaping double quotes in the selection text.
+
+This is useful if searching with a query which requires wrapping in double qoutes. For example, see "Sourcegraph literal" url template in [the screenshot](#xcodeuniversalsearch).
+
+### Setup key bindings
 
 1. Launch Xcode.
 1. Open Xcode > Preferences > Key Bindings.
