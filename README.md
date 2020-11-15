@@ -80,3 +80,15 @@ This is useful if searching with a query which requires wrapping in double qoute
 | Literal search for seletion | ⌥s (Option-s) |
 | Search for Swift type with selected name | ⌥⇧S (Option-Shift-S) |
 | Search for file with selected text | ⌥f (Option-f) |
+
+# TODO
+
+See [Issues](../../issues) for TODOs and bugs.
+
+# Assets
+
+All assets can be found in [this XcodeUniversalSearch Figma](https://www.figma.com/file/20bdfsBCeLtUay8GfARELk/XcodeUniversalSearch?node-id=0%3A1) (only the app icon right now).
+
+# Attributions
+
+- The magnifying glass asset used in the app icon is sourced from [pngwing](https://www.pngwing.com/en/free-png-bimmu) (non-commercial use license).
