@@ -24,7 +24,7 @@
                                         <menuItem title="Check for updates..." id="OyJ-dj-DGv">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="checkForUpdates:" target="VZ0-V8-Llj" id="Z4U-cD-Kaw"/>
+                                                <action selector="checkForUpdates:" target="VZ0-V8-Llj" id="Rie-5a-6xz"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
@@ -683,7 +683,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="XcodeUniversalSearch" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="VZ0-V8-Llj" customClass="SUUpdater"/>
+                <customObject id="VZ0-V8-Llj" customClass="SPUStandardUpdaterController"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>

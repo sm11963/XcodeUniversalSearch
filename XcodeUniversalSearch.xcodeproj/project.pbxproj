@@ -23,8 +23,8 @@
 		E245C95D254F21340059225D /* XcodeUniversalSearchExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E245C94E254F21340059225D /* XcodeUniversalSearchExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E245C967254F43CA0059225D /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E245C966254F43CA0059225D /* XcodeKit.framework */; };
 		E245C968254F43CA0059225D /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E245C966254F43CA0059225D /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E2783FDC2562331B0023B806 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2783FDB2562331B0023B806 /* Sparkle.framework */; };
-		E2783FE7256233FE0023B806 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2783FDB2562331B0023B806 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E27840172562E05C0023B806 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27840162562E05C0023B806 /* Sparkle.framework */; };
+		E27840182562E06A0023B806 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E27840162562E05C0023B806 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2A5FDAA255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A5FDA1255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework */; };
 		E2A5FDB1255C803B0066DB35 /* XcodeUniversalSearchFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A5FDB0255C803B0066DB35 /* XcodeUniversalSearchFoundationTests.swift */; };
 		E2A5FDB3255C803B0066DB35 /* XcodeUniversalSearchFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A5FDA3255C803B0066DB35 /* XcodeUniversalSearchFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -124,7 +124,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E2A5FDB7255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework in Embed Frameworks */,
-				E2783FE7256233FE0023B806 /* Sparkle.framework in Embed Frameworks */,
+				E27840182562E06A0023B806 /* Sparkle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,7 +160,7 @@
 		E245C959254F21340059225D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E245C95A254F21340059225D /* XcodeUniversalSearchExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeUniversalSearchExtension.entitlements; sourceTree = "<group>"; };
 		E245C966254F43CA0059225D /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
-		E2783FDB2562331B0023B806 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		E27840162562E05C0023B806 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		E2A5FDA1255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeUniversalSearchFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A5FDA3255C803B0066DB35 /* XcodeUniversalSearchFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeUniversalSearchFoundation.h; sourceTree = "<group>"; };
 		E2A5FDA4255C803B0066DB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A5FDB6255C803B0066DB35 /* XcodeUniversalSearchFoundation.framework in Frameworks */,
-				E2783FDC2562331B0023B806 /* Sparkle.framework in Frameworks */,
+				E27840172562E05C0023B806 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +300,7 @@
 		E245C94F254F21340059225D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2783FDB2562331B0023B806 /* Sparkle.framework */,
+				E27840162562E05C0023B806 /* Sparkle.framework */,
 				E245C966254F43CA0059225D /* XcodeKit.framework */,
 				E245C950254F21340059225D /* Cocoa.framework */,
 				E245C952254F21340059225D /* XcodeKit.framework */,
