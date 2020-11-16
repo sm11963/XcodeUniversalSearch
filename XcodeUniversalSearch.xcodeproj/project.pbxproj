@@ -10,6 +10,14 @@
 		E216B8372551DD7F00269947 /* CommandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B8362551DD7F00269947 /* CommandTableViewController.swift */; };
 		E216B83F2551DE2800269947 /* CommandTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B83E2551DE2800269947 /* CommandTable.swift */; };
 		E216B86825523E4F00269947 /* CommandOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B86725523E4F00269947 /* CommandOptionsView.swift */; };
+		E2217B03256348F2004DCB78 /* org.sparkle-project.InstallerConnection.xpc in Resources */ = {isa = PBXBuildFile; fileRef = E2217AFF256348F1004DCB78 /* org.sparkle-project.InstallerConnection.xpc */; };
+		E2217B04256348F2004DCB78 /* org.sparkle-project.InstallerLauncher.xpc in Resources */ = {isa = PBXBuildFile; fileRef = E2217B00256348F2004DCB78 /* org.sparkle-project.InstallerLauncher.xpc */; };
+		E2217B05256348F2004DCB78 /* org.sparkle-project.Downloader.xpc in Resources */ = {isa = PBXBuildFile; fileRef = E2217B01256348F2004DCB78 /* org.sparkle-project.Downloader.xpc */; };
+		E2217B06256348F2004DCB78 /* org.sparkle-project.InstallerStatus.xpc in Resources */ = {isa = PBXBuildFile; fileRef = E2217B02256348F2004DCB78 /* org.sparkle-project.InstallerStatus.xpc */; };
+		E2217B0C25634B25004DCB78 /* org.sparkle-project.Downloader.xpc in Embed XPC */ = {isa = PBXBuildFile; fileRef = E2217B01256348F2004DCB78 /* org.sparkle-project.Downloader.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E2217B0D25634B25004DCB78 /* org.sparkle-project.InstallerConnection.xpc in Embed XPC */ = {isa = PBXBuildFile; fileRef = E2217AFF256348F1004DCB78 /* org.sparkle-project.InstallerConnection.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E2217B0E25634B25004DCB78 /* org.sparkle-project.InstallerLauncher.xpc in Embed XPC */ = {isa = PBXBuildFile; fileRef = E2217B00256348F2004DCB78 /* org.sparkle-project.InstallerLauncher.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E2217B0F25634B25004DCB78 /* org.sparkle-project.InstallerStatus.xpc in Embed XPC */ = {isa = PBXBuildFile; fileRef = E2217B02256348F2004DCB78 /* org.sparkle-project.InstallerStatus.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E245C919254F21060059225D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E245C918254F21060059225D /* AppDelegate.swift */; };
 		E245C91B254F21060059225D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E245C91A254F21060059225D /* ContentView.swift */; };
 		E245C91D254F21070059225D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E245C91C254F21070059225D /* Assets.xcassets */; };
@@ -94,6 +102,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		E2217B0B25634B14004DCB78 /* Embed XPC */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				E2217B0C25634B25004DCB78 /* org.sparkle-project.Downloader.xpc in Embed XPC */,
+				E2217B0D25634B25004DCB78 /* org.sparkle-project.InstallerConnection.xpc in Embed XPC */,
+				E2217B0E25634B25004DCB78 /* org.sparkle-project.InstallerLauncher.xpc in Embed XPC */,
+				E2217B0F25634B25004DCB78 /* org.sparkle-project.InstallerStatus.xpc in Embed XPC */,
+			);
+			name = "Embed XPC";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E245C961254F21340059225D /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +160,10 @@
 		E216B8582552042E00269947 /* String+FoundationalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FoundationalHelpers.swift"; sourceTree = "<group>"; };
 		E216B85D2552045500269947 /* Collection+FoundationalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Collection+FoundationalHelpers.swift"; path = "XcodeUniversalSearchFoundation/FoundationExtensions/Collection+FoundationalHelpers.swift"; sourceTree = SOURCE_ROOT; };
 		E216B86725523E4F00269947 /* CommandOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandOptionsView.swift; sourceTree = "<group>"; };
+		E2217AFF256348F1004DCB78 /* org.sparkle-project.InstallerConnection.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; path = "org.sparkle-project.InstallerConnection.xpc"; sourceTree = "<group>"; };
+		E2217B00256348F2004DCB78 /* org.sparkle-project.InstallerLauncher.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; path = "org.sparkle-project.InstallerLauncher.xpc"; sourceTree = "<group>"; };
+		E2217B01256348F2004DCB78 /* org.sparkle-project.Downloader.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; path = "org.sparkle-project.Downloader.xpc"; sourceTree = "<group>"; };
+		E2217B02256348F2004DCB78 /* org.sparkle-project.InstallerStatus.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; path = "org.sparkle-project.InstallerStatus.xpc"; sourceTree = "<group>"; };
 		E245C915254F21060059225D /* XcodeUniversalSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeUniversalSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E245C918254F21060059225D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E245C91A254F21060059225D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,7 +180,6 @@
 		E245C93B254F21080059225D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E245C94E254F21340059225D /* XcodeUniversalSearchExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XcodeUniversalSearchExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E245C950254F21340059225D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		E245C952254F21340059225D /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		E245C955254F21340059225D /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		E245C957254F21340059225D /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		E245C959254F21340059225D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -226,6 +251,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2217AFE256347A8004DCB78 /* XPCServices */ = {
+			isa = PBXGroup;
+			children = (
+				E2217B01256348F2004DCB78 /* org.sparkle-project.Downloader.xpc */,
+				E2217AFF256348F1004DCB78 /* org.sparkle-project.InstallerConnection.xpc */,
+				E2217B00256348F2004DCB78 /* org.sparkle-project.InstallerLauncher.xpc */,
+				E2217B02256348F2004DCB78 /* org.sparkle-project.InstallerStatus.xpc */,
+			);
+			path = XPCServices;
+			sourceTree = "<group>";
+		};
 		E245C90C254F21060059225D = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +273,7 @@
 				E2A5FDA2255C803B0066DB35 /* XcodeUniversalSearchFoundation */,
 				E2A5FDAF255C803B0066DB35 /* XcodeUniversalSearchFoundationTests */,
 				E245C94F254F21340059225D /* Frameworks */,
+				E2217AFE256347A8004DCB78 /* XPCServices */,
 				E245C916254F21060059225D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -303,7 +340,6 @@
 				E27840162562E05C0023B806 /* Sparkle.framework */,
 				E245C966254F43CA0059225D /* XcodeKit.framework */,
 				E245C950254F21340059225D /* Cocoa.framework */,
-				E245C952254F21340059225D /* XcodeKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -391,6 +427,7 @@
 				E245C913254F21060059225D /* Resources */,
 				E245C961254F21340059225D /* Embed App Extensions */,
 				E2A5FDB8255C803B0066DB35 /* Embed Frameworks */,
+				E2217B0B25634B14004DCB78 /* Embed XPC */,
 			);
 			buildRules = (
 			);
@@ -555,8 +592,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2217B04256348F2004DCB78 /* org.sparkle-project.InstallerLauncher.xpc in Resources */,
+				E2217B03256348F2004DCB78 /* org.sparkle-project.InstallerConnection.xpc in Resources */,
 				E245C923254F21070059225D /* Main.storyboard in Resources */,
 				E245C920254F21070059225D /* Preview Assets.xcassets in Resources */,
+				E2217B05256348F2004DCB78 /* org.sparkle-project.Downloader.xpc in Resources */,
+				E2217B06256348F2004DCB78 /* org.sparkle-project.InstallerStatus.xpc in Resources */,
 				E245C91D254F21070059225D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

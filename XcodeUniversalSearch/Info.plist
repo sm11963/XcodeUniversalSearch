@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SUPublicEDKey</key>
-	<string>5S/CYY/uymChwpF7YDOO9c4ANoZpWktxwyqCbtQP9Mk=</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -32,5 +30,7 @@
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
 	<string>https://raw.githubusercontent.com/sm11963/XcodeUniversalSearch/main/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>5S/CYY/uymChwpF7YDOO9c4ANoZpWktxwyqCbtQP9Mk=</string>
 </dict>
 </plist>
