@@ -1,0 +1,77 @@
+{
+  "commands" : [
+    {
+      "name" : "Google",
+      "options" : {
+        "shouldPercentEncodeFullUrl" : true,
+        "shouldEscapeDoubleQuotes" : false,
+        "shouldEscapeForRegex" : false
+      },
+      "urlTemplate" : "https:\/\/google.com\/search?q=%s"
+    },
+    {
+      "name" : "StackOverflow",
+      "options" : {
+        "shouldPercentEncodeFullUrl" : true,
+        "shouldEscapeDoubleQuotes" : false,
+        "shouldEscapeForRegex" : false
+      },
+      "urlTemplate" : "https:\/\/stackoverflow.com\/search?q=%s"
+    },
+    {
+      "name" : "Apple Documentation",
+      "options" : {
+        "shouldPercentEncodeFullUrl" : true,
+        "shouldEscapeDoubleQuotes" : false,
+        "shouldEscapeForRegex" : false
+      },
+      "urlTemplate" : "https:\/\/developer.apple.com\/search?q=%s"
+    },
+    {
+      "name" : "Github",
+      "options" : {
+        "shouldPercentEncodeFullUrl" : true,
+        "shouldEscapeDoubleQuotes" : false,
+        "shouldEscapeForRegex" : false
+      },
+      "urlTemplate" : "https:\/\/github.com\/search?q=%s"
+    },
+    {
+      "name" : "RxSwift",
+      "options" : {
+        "shouldPercentEncodeFullUrl" : true,
+        "shouldEscapeDoubleQuotes" : false,
+        "shouldEscapeForRegex" : false
+      },
+      "urlTemplate" : "https:\/\/github.com\/ReactiveX\/RxSwift\/search?q=%s"
+    },
+    {
+      "name" : "Sourcegraph literal",
+      "options" : {
+        "shouldPercentEncodeFullUrl" : true,
+        "shouldEscapeDoubleQuotes" : true,
+        "shouldEscapeForRegex" : false
+      },
+      "urlTemplate" : "https:\/\/sourcegraph.com\/search?q=repo:^github\\.com\/ReactiveX\/RxSwift$+content:\"%s\"&patternType=literal"
+    },
+    {
+      "name" : "Sourcegraph type",
+      "options" : {
+        "shouldPercentEncodeFullUrl" : true,
+        "shouldEscapeDoubleQuotes" : false,
+        "shouldEscapeForRegex" : true
+      },
+      "urlTemplate" : "https:\/\/sourcegraph.com\/search?q=repo:%5Egithub%5C.com\/ReactiveX\/RxSwift%24+\/%28typealias%7Cstruct%7Cclass%7Cprotocol%7Cenum%29+%s\/&patternType=regexp"
+    },
+    {
+      "name" : "Sourcegraph file",
+      "options" : {
+        "shouldPercentEncodeFullUrl" : true,
+        "shouldEscapeDoubleQuotes" : false,
+        "shouldEscapeForRegex" : true
+      },
+      "urlTemplate" : "https:\/\/sourcegraph.com\/search?q=repo:%5Egithub%5C.com\/ReactiveX\/RxSwift%24+file:%s&patternType=literal"
+    }
+  ],
+  "version" : 1
+}

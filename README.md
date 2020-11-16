@@ -64,6 +64,10 @@ Enables escaping double quotes in the selection text.
 
 This is useful if searching with a query which requires wrapping in double qoutes. For example, see "Sourcegraph literal" url template in [the screenshot](#xcodeuniversalsearch).
 
+#### Export / Import configuration
+
+You can export and import your configuration as a JSON file. This allows you to backup or share your configurations. For example, the configuration used in [the screenshot](#xcodeuniversalsearch) is this [example_config.json](resources/example_config.json).
+
 ### Setup key bindings
 
 1. Launch Xcode.
