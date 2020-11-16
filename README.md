@@ -97,4 +97,5 @@ All assets can be found in [this XcodeUniversalSearch Figma](https://www.figma.c
 
 # Attributions
 
+- We use a replication of [krzysztofzablocki/Versionable](https://github.com/krzysztofzablocki/Versionable) to make our models versionable.
 - The magnifying glass asset used in the app icon is sourced from [pngwing](https://www.pngwing.com/en/free-png-bimmu) (non-commercial use license).
