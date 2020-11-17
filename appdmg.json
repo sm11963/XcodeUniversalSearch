@@ -1,5 +1,6 @@
 {
   "title": "XcodeUniversalSearch",
+  "icon": "resources/icons/xcodeuniversalsearch.icns",
   "contents": [
     { "x": 448, "y": 200, "type": "link", "path": "/Applications" },
     { "x": 192, "y": 200, "type": "file", "path": "XcodeUniversalSearch.app" }
