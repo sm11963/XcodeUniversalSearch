@@ -10,10 +10,6 @@
 		E216B8372551DD7F00269947 /* CommandTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B8362551DD7F00269947 /* CommandTableViewController.swift */; };
 		E216B83F2551DE2800269947 /* CommandTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B83E2551DE2800269947 /* CommandTable.swift */; };
 		E216B86825523E4F00269947 /* CommandOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216B86725523E4F00269947 /* CommandOptionsView.swift */; };
-		E2217B03256348F2004DCB78 /* org.sparkle-project.InstallerConnection.xpc in Resources */ = {isa = PBXBuildFile; fileRef = E2217AFF256348F1004DCB78 /* org.sparkle-project.InstallerConnection.xpc */; };
-		E2217B04256348F2004DCB78 /* org.sparkle-project.InstallerLauncher.xpc in Resources */ = {isa = PBXBuildFile; fileRef = E2217B00256348F2004DCB78 /* org.sparkle-project.InstallerLauncher.xpc */; };
-		E2217B05256348F2004DCB78 /* org.sparkle-project.Downloader.xpc in Resources */ = {isa = PBXBuildFile; fileRef = E2217B01256348F2004DCB78 /* org.sparkle-project.Downloader.xpc */; };
-		E2217B06256348F2004DCB78 /* org.sparkle-project.InstallerStatus.xpc in Resources */ = {isa = PBXBuildFile; fileRef = E2217B02256348F2004DCB78 /* org.sparkle-project.InstallerStatus.xpc */; };
 		E2217B0C25634B25004DCB78 /* org.sparkle-project.Downloader.xpc in Embed XPC */ = {isa = PBXBuildFile; fileRef = E2217B01256348F2004DCB78 /* org.sparkle-project.Downloader.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E2217B0D25634B25004DCB78 /* org.sparkle-project.InstallerConnection.xpc in Embed XPC */ = {isa = PBXBuildFile; fileRef = E2217AFF256348F1004DCB78 /* org.sparkle-project.InstallerConnection.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E2217B0E25634B25004DCB78 /* org.sparkle-project.InstallerLauncher.xpc in Embed XPC */ = {isa = PBXBuildFile; fileRef = E2217B00256348F2004DCB78 /* org.sparkle-project.InstallerLauncher.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -592,12 +588,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2217B04256348F2004DCB78 /* org.sparkle-project.InstallerLauncher.xpc in Resources */,
-				E2217B03256348F2004DCB78 /* org.sparkle-project.InstallerConnection.xpc in Resources */,
 				E245C923254F21070059225D /* Main.storyboard in Resources */,
 				E245C920254F21070059225D /* Preview Assets.xcassets in Resources */,
-				E2217B05256348F2004DCB78 /* org.sparkle-project.Downloader.xpc in Resources */,
-				E2217B06256348F2004DCB78 /* org.sparkle-project.InstallerStatus.xpc in Resources */,
 				E245C91D254F21070059225D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
