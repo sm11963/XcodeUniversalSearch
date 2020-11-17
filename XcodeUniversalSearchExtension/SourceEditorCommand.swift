@@ -56,7 +56,7 @@ final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             guard let encoded = command.urlTemplate
                     // First remove percent encoding in case somethings are already encoded in the url template
                     .removingPercentEncoding(ignoringTokens: [Self.selectionToken])?
-                    .replacingOccurrences(of: Self.selectionToken, with: encodedSelection)
+                    .replacingOccurrences(of: Self.selectionToken, with: processedSelection)
                     // Note that this is not exactly escaping correctly. We are escaping all characters since we are escaping the full url string for characters
                     // not accepted in the url query string. Really each url component should be escaped individually. So if any issues occur with the urls
                     // there is good chance this is an issue.
