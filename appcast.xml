@@ -4,6 +4,13 @@
         <title>XcodeUniversalSearch</title>
 
         <item>
+            <title>0.2.1</title>
+            <pubDate>Mon, 16 Nov 2020 22:30:00 -0800</pubDate>
+            <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/sm11963/XcodeUniversalSearch/releases/download/v0.2.1/XcodeUniversalSearch-v0.2.1.dmg" sparkle:version="0.2.1" sparkle:shortVersionString="0.2.1" sparkle:edSignature="L6Pr5tthVuz54MIg0qpT059q1YbocoUl9vX4o6wmoAVlzBxkOI38rg9KPgBebwncJ0C8Lrz2zAyXPh3i7lp+Bw==" length="2862479" type="application/octet-stream"/>
+        </item>
+
+        <item>
             <title>0.2.0</title>
             <pubDate>Mon, 16 Nov 2020 22:10:00 -0800</pubDate>
             <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
