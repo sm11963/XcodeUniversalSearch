@@ -1,9 +1,17 @@
 {
   "title": "XcodeUniversalSearch",
+  "background": "resources/dmg-background.png",
+  "window": {
+    "size": {
+      "width": 660,
+      "height": 400
+    }
+  },
+  "icon-size": 100,
   "icon": "resources/icons/xcodeuniversalsearch-dmg.icns",
   "contents": [
-    { "x": 448, "y": 200, "type": "link", "path": "/Applications" },
-    { "x": 192, "y": 200, "type": "file", "path": "XcodeUniversalSearch.app" }
+    { "x": 490, "y": 190, "type": "link", "path": "/Applications" },
+    { "x": 170, "y": 190, "type": "file", "path": "build/releases/XcodeUniversalSearch.app" }
   ],
   "code-sign": {
     "signing-identity" : "Developer ID Application: Sam Miller (M952V223C9)"
