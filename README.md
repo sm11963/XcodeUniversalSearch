@@ -1,4 +1,4 @@
-<img src="XcodeUniversalSearch/Assets.xcassets/AppIcon.appiconset/512x512@2x.png" width="64" align="left">
+<img src="XcodeUniversalSearch/Assets.xcassets/AppIcon.appiconset/icon_512x512@2x.png" width="64" align="left">
 
 # XcodeUniversalSearch
 
